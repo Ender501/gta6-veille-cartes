@@ -11,7 +11,7 @@
     "statut": "Confirmé",
     "resume": "Compatible Blender 5.3 ; l'Asset Browser importe les modèles complets depuis ton installation de GTA V.",
     "detail": "Version mineure du 10/11. L'Asset Browser peut maintenant importer les assets complets depuis l'installation de GTA V au lieu des modèles simplifiés de la bibliothèque. Le dossier d'installation est mémorisé, les archétypes propriétaires des MLO sont retrouvés par UUID, et la physique des fragments (LOD2/LOD3) est mieux gérée.",
-    "pourToi": "Habiller tes MLO avec les vrais props du jeu ; plus tard, utile pour les véhicules.",
+    "pourToi": "Habiller ses MLO avec les vrais props du jeu ; plus tard, utile pour les véhicules.",
     "liens": [
       {
         "label": "Note de version",
@@ -32,7 +32,7 @@
     "statut": "Confirmé",
     "resume": "Outil gratuit de Cfx.re pour créer fumée, vapeur, étincelles ou eau (.ypt) en nœuds, avec aperçu en temps réel.",
     "detail": "Catalyst crée et édite les effets de particules .ypt pour GTA V Legacy et Enhanced. Édition en nœuds, simulation en temps réel, import et export .ypt, format de projet partageable. Disponible gratuitement via le Cfx Portal.",
-    "pourToi": "Animer tes intérieurs et tes props sans outils détournés ; un outil officiel à suivre pour GTA 6.",
+    "pourToi": "Animer intérieurs et props sans outils détournés ; un outil officiel à suivre pour GTA 6.",
     "liens": [
       {
         "label": "Annonce Cfx.re",
@@ -120,7 +120,7 @@
     "statut": "Avis",
     "resume": "Pas de fait nouveau : le pipeline des props et les compétences 3D se transposeront à GTA 6.",
     "detail": "Avis d'un créateur de props et MLO. La chaîne modèle, matériaux, collisions, test sur serveur se transposera, comme la modélisation, les UV, le texturing et l'optimisation. Il prédit un portage PC plus rapide que pour GTA V, sans source. Ne parle ni des MLO ni des véhicules.",
-    "pourToi": "Conforte la stratégie : garder des sources riches, l'export changera.",
+    "pourToi": "Conforte une stratégie simple : garder des fichiers sources riches, seul l'export changera.",
     "liens": [
       {
         "label": "Vidéo",
