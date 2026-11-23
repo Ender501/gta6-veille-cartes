@@ -3,87 +3,151 @@
     "id": "2026-11-23-sollumz-291",
     "date": "2026-11-10",
     "titre": "Sollumz 2.9.1 importe les vrais modèles du jeu",
-    "source": { "type": "Outil", "nom": "GitHub Sollumz" },
+    "source": {
+      "type": "Outil",
+      "nom": "GitHub Sollumz"
+    },
     "importance": "haute",
     "statut": "Confirmé",
     "resume": "Compatible Blender 5.3 ; l'Asset Browser importe les modèles complets depuis ton installation de GTA V.",
     "detail": "Version mineure du 10/11. L'Asset Browser peut maintenant importer les assets complets depuis l'installation de GTA V au lieu des modèles simplifiés de la bibliothèque. Le dossier d'installation est mémorisé, les archétypes propriétaires des MLO sont retrouvés par UUID, et la physique des fragments (LOD2/LOD3) est mieux gérée.",
     "pourToi": "Habiller tes MLO avec les vrais props du jeu ; plus tard, utile pour les véhicules.",
-    "liens": [{ "label": "Note de version", "url": "https://github.com/Sollumz/Sollumz/releases/tag/v2.9.1" }]
+    "liens": [
+      {
+        "label": "Note de version",
+        "url": "https://github.com/Sollumz/Sollumz/releases/tag/v2.9.1"
+      }
+    ],
+    "image": "https://opengraph.githubassets.com/1/Sollumz/Sollumz"
   },
   {
     "id": "2026-11-23-catalyst",
     "date": "2026-11-12",
     "titre": "Catalyst : l'éditeur officiel d'effets de particules",
-    "source": { "type": "Officiel", "nom": "Forum Cfx.re" },
+    "source": {
+      "type": "Officiel",
+      "nom": "Forum Cfx.re"
+    },
     "importance": "haute",
     "statut": "Confirmé",
     "resume": "Outil gratuit de Cfx.re pour créer fumée, vapeur, étincelles ou eau (.ypt) en nœuds, avec aperçu en temps réel.",
     "detail": "Catalyst crée et édite les effets de particules .ypt pour GTA V Legacy et Enhanced. Édition en nœuds, simulation en temps réel, import et export .ypt, format de projet partageable. Disponible gratuitement via le Cfx Portal.",
     "pourToi": "Animer tes intérieurs et tes props sans outils détournés ; un outil officiel à suivre pour GTA 6.",
-    "liens": [{ "label": "Annonce Cfx.re", "url": "https://forum.cfx.re/t/introducing-catalyst/5437441" }]
+    "liens": [
+      {
+        "label": "Annonce Cfx.re",
+        "url": "https://forum.cfx.re/t/introducing-catalyst/5437441"
+      }
+    ],
+    "image": "https://forum-cfx-re.akamaized.net/optimized/5X/e/9/2/9/e929c382c761ed1886285a73503aad89739d1503_2_1024x576.jpeg"
   },
   {
     "id": "2026-11-23-fuite-xbox",
     "date": "2026-11-23",
     "titre": "Build Xbox volée : l'exécutable a fuité",
-    "source": { "type": "Presse", "nom": "XDA, RockstarINTEL" },
+    "source": {
+      "type": "Presse",
+      "nom": "XDA, RockstarINTEL"
+    },
     "importance": "moyenne",
     "statut": "Rumeur",
     "resume": "Un portage PC non officiel, « Leonida », tente de faire tourner la build ; le jeu ne démarre pas encore.",
     "detail": "Build Xbox d'environ 200 Go, chiffrée, apparue le 19/11, puis son exécutable le 23/11, diffusés par CyberLeek. Leonida est une recompilation statique assistée par IA (26 503 shaders traduits en Vulkan) qui n'aboutit pas encore. Build jugée ancienne par un chercheur de la communauté ; aucune réaction de Rockstar.",
     "pourToi": "La rétro-ingénierie des formats GTA 6 va sans doute démarrer là-dessus. Matériel volé : ne rien télécharger, de faux « GTA 6 PC » contiennent des virus.",
     "liens": [
-      { "label": "XDA", "url": "https://www.xda-developers.com/gta-6-xbox-executable-leaked-opening-door-for-pc-recompilation-projects-begin-testing/" },
-      { "label": "RockstarINTEL", "url": "https://rockstarintel.com/could-this-major-gta-vi-leak-make-it-playable-on-pc/" }
-    ]
+      {
+        "label": "XDA",
+        "url": "https://www.xda-developers.com/gta-6-xbox-executable-leaked-opening-door-for-pc-recompilation-projects-begin-testing/"
+      },
+      {
+        "label": "RockstarINTEL",
+        "url": "https://rockstarintel.com/could-this-major-gta-vi-leak-make-it-playable-on-pc/"
+      }
+    ],
+    "image": "https://rockstarintel.com/wp-content/uploads/2026/11/Jason_and_Lucia_05.jpg"
   },
   {
     "id": "2026-11-23-pas-de-pc",
     "date": "2026-11-20",
     "titre": "Toujours pas de version PC annoncée",
-    "source": { "type": "Presse", "nom": "IBTimes" },
+    "source": {
+      "type": "Presse",
+      "nom": "IBTimes"
+    },
     "importance": "moyenne",
     "statut": "Rumeur",
     "resume": "Rockstar ne cite que PS5 et Xbox. GamesBeat avance le premier trimestre 2027, d'après des sources anonymes.",
     "detail": "L'annonce de sortie de Rockstar ne mentionne que PS5 et Xbox Series. Les résultats de Take-Two du 9/11 ne donnent aucune date PC, et Strauss Zelnick renvoie aux studios. GamesBeat (13/10, mis à jour le 18/11) parle du 1er trimestre 2027, non commenté par Rockstar.",
     "pourToi": "Pas de modding solo avant la version PC : si la rumeur dit vrai, début 2027.",
-    "liens": [{ "label": "IBTimes", "url": "https://www.ibtimes.co.uk/gta-vi-pc-release-early-2027-report-1833680" }]
+    "liens": [
+      {
+        "label": "IBTimes",
+        "url": "https://www.ibtimes.co.uk/gta-vi-pc-release-early-2027-report-1833680"
+      }
+    ],
+    "image": "https://d.ibtimes.co.uk/en/full/1845491/gta-6-pc-release-rockstars-confirmed-platforms-2027-report.png"
   },
   {
     "id": "2026-11-23-sollumz-multijeux",
     "date": "2026-11-22",
     "titre": "Sollumz se prépare à gérer plusieurs jeux",
-    "source": { "type": "Outil", "nom": "Commits Sollumz" },
+    "source": {
+      "type": "Outil",
+      "nom": "Commits Sollumz"
+    },
     "importance": "moyenne",
     "statut": "Confirmé",
     "resume": "Le code propre à GTA 5 est séparé du reste ; une branche RDR2 est citée. Rien d'annoncé pour GTA 6.",
     "detail": "Les commits des 21 et 22/11 déplacent le code des drawables GTA 5 dans un paquet dédié, « en vue de séparer le code en une partie indépendante du jeu et des parties par jeu ». Une branche dev/rdr2 est référencée. Aussi : aperçus de matériaux plus fidèles, réduction configurable des textures HD.",
     "pourToi": "C'est sur cette base qu'un support GTA 6 pourrait arriver un jour.",
-    "liens": [{ "label": "Commits", "url": "https://github.com/Sollumz/Sollumz/commits/main" }]
+    "liens": [
+      {
+        "label": "Commits",
+        "url": "https://github.com/Sollumz/Sollumz/commits/main"
+      }
+    ],
+    "image": "https://opengraph.githubassets.com/1/Sollumz/Sollumz"
   },
   {
     "id": "2026-11-23-stumpy",
     "date": "2026-11-22",
     "titre": "Stumpy Mason : l'avenir du modding GTA 6",
-    "source": { "type": "YouTube", "nom": "Stumpy Mason" },
+    "source": {
+      "type": "YouTube",
+      "nom": "Stumpy Mason"
+    },
     "importance": "basse",
     "statut": "Avis",
     "resume": "Pas de fait nouveau : le pipeline des props et les compétences 3D se transposeront à GTA 6.",
     "detail": "Avis d'un créateur de props et MLO. La chaîne modèle, matériaux, collisions, test sur serveur se transposera, comme la modélisation, les UV, le texturing et l'optimisation. Il prédit un portage PC plus rapide que pour GTA V, sans source. Ne parle ni des MLO ni des véhicules.",
     "pourToi": "Conforte la stratégie : garder des sources riches, l'export changera.",
-    "liens": [{ "label": "Vidéo", "url": "https://www.youtube.com/watch?v=FELy6m2UcnE" }]
+    "liens": [
+      {
+        "label": "Vidéo",
+        "url": "https://www.youtube.com/watch?v=FELy6m2UcnE"
+      }
+    ],
+    "image": "https://i.ytimg.com/vi/FELy6m2UcnE/hqdefault.jpg"
   },
   {
     "id": "2026-11-23-mrboss",
     "date": "2026-11-23",
     "titre": "Mise à jour 1.002.002 annoncée sur YouTube",
-    "source": { "type": "YouTube", "nom": "MrBossFTW" },
+    "source": {
+      "type": "YouTube",
+      "nom": "MrBossFTW"
+    },
     "importance": "basse",
     "statut": "Rumeur",
     "resume": "Correctifs (plantages, météo, sauvegarde) ; aucune page Rockstar ni article ne la confirme encore.",
     "detail": "La vidéo annonce une 1.002.002 (603,8 Mo sur PS5, 1,6 Go sur Xbox) en citant le support Rockstar, introuvable. Elle reprend aussi la fuite de l'exécutable sans source ni détail technique.",
     "pourToi": "Rien pour le modding.",
-    "liens": [{ "label": "Vidéo", "url": "https://www.youtube.com/watch?v=5sN7uvizcBI" }]
+    "liens": [
+      {
+        "label": "Vidéo",
+        "url": "https://www.youtube.com/watch?v=5sN7uvizcBI"
+      }
+    ],
+    "image": "https://i.ytimg.com/vi/5sN7uvizcBI/hqdefault.jpg"
   }
 ]

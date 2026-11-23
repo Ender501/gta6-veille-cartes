@@ -13,6 +13,7 @@
   --TEXT:#F2F2F4;--TEXT2:#A0A0AB;--DIM:#8E8E9A;--ACCENT:#45A5FF;--ACCENT_RGB:69,165,255;--INK:#0B0B0D;--TEXT_RGB:242,242,244;
   --lit:rgba(var(--TEXT_RGB),.07);--lip:color-mix(in srgb,var(--BG) 70%,black);
   --sheen:linear-gradient(rgba(var(--TEXT_RGB),.025),transparent 60%);
+  --HAUTE:#FF5C5C;--HAUTE_RGB:255,92,92;--MOY:#F5C542;--BASSE:#45A5FF;
   --MONO:"Azeret Mono",ui-monospace,monospace;--SANS:Inter,"Segoe UI",system-ui,sans-serif;
   --T:190ms;--EASE:cubic-bezier(.33,1,.68,1);--gut:32px;
 }
@@ -53,8 +54,13 @@ section+section{margin-top:40px}
   transition:transform 280ms cubic-bezier(.34,1.5,.64,1),box-shadow var(--T) var(--EASE)}
 .card:hover,.card:focus-visible{--ring:var(--TEXT2);transform:translateY(-3px)}
 .card:active{transform:translateY(1px);box-shadow:inset 0 1px 0 var(--lit),0 0 0 var(--lip),inset 0 0 0 1px var(--ring)}
-.card.is-haute{--ring:rgba(var(--ACCENT_RGB),.55)}
-.card.is-haute:hover,.card.is-haute:focus-visible{--ring:var(--ACCENT)}
+.card.is-haute{--ring:rgba(var(--HAUTE_RGB),.6)}
+.card.is-haute:hover,.card.is-haute:focus-visible{--ring:var(--HAUTE)}
+.pic{position:relative;display:grid;place-items:center;aspect-ratio:16/9;margin:-4px -4px 2px;overflow:hidden;background:var(--BG);border:1px solid var(--LINE);border-radius:2px;box-shadow:inset 0 1px 3px rgba(0,0,0,.8);color:var(--LINE2)}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.88;transition:opacity var(--T) var(--EASE)}
+.card:hover .pic img,.card:focus-visible .pic img{opacity:1}
+.pic svg{width:30%;height:44%;fill:none;stroke:currentColor;stroke-width:1.5}
+.dlg .pic{margin:0}
 .head{display:flex;align-items:center;gap:8px}
 .kind{display:inline-flex;align-items:center;gap:6px;font:700 11px var(--MONO);letter-spacing:.08em;text-transform:uppercase;color:var(--TEXT2)}
 .kind svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2}
@@ -66,11 +72,12 @@ section+section{margin-top:40px}
 /* pastille d'importance : forme + mot, jamais la couleur seule */
 .imp{margin-left:auto;display:inline-flex;align-items:center;gap:6px;height:22px;padding:0 8px;border-radius:2px;font:700 11px var(--MONO);letter-spacing:.06em;text-transform:uppercase}
 .imp i{width:7px;height:7px;border-radius:50%}
-.imp-haute{background:var(--ACCENT);color:var(--INK)} .imp-haute i{background:var(--INK)}
-.imp-moyenne{border:1px solid var(--LINE2);color:var(--TEXT)} .imp-moyenne i{background:var(--TEXT)}
-.imp-basse{border:1px solid var(--LINE);color:var(--DIM)} .imp-basse i{border:1.5px solid var(--DIM)}
+.imp i{background:var(--INK)}
+.imp-haute{background:var(--HAUTE);color:var(--INK)}
+.imp-moyenne{background:var(--MOY);color:var(--INK)}
+.imp-basse{background:var(--BASSE);color:var(--INK)}
 .stat{font:700 11px var(--MONO);letter-spacing:.06em;text-transform:uppercase}
-.stat-rumeur{color:#E8B45A} .stat-avis{color:var(--DIM)} .stat-confirmé{color:var(--TEXT2)}
+.stat{color:var(--TEXT2)} .stat-rumeur{font-style:italic}
 
 /* détail d'une carte */
 dialog{width:min(640px,calc(100vw - 24px));max-height:calc(100svh - 24px);padding:0;border:0;border-radius:3px;color:var(--TEXT);background:var(--RAISED);
@@ -122,12 +129,14 @@ const RANK = { haute: 0, moyenne: 1, basse: 2 };
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const day = d => new Date(d + 'T12:00:00').toLocaleDateString('fr-BE', { day: 'numeric', month: 'short' });
 const imp = l => `<span class="imp imp-${l}"><i></i>${l}</span>`;
+const pic = c => `<div class="pic"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[c.source.type] || ICONS.Doc}</svg>${c.image ? `<img src="${esc(c.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ''}</div>`; // l'icône reste dessous si l'image manque ou casse
 const kind = t => `<span class="kind"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[t] || ICONS.Doc}</svg>${esc(t)}</span>`;
 
 let cards = [];
 
 function card(c, i) {
   return `<button class="card is-${c.importance}" data-i="${i}">
+    ${pic(c)}
     <div class="head">${kind(c.source.type)}${imp(c.importance)}</div>
     <h2>${esc(c.titre)}</h2>
     <p>${esc(c.resume)}</p>
