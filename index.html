@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Veille GTA 6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Azeret+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* tokens repris de la page ForgeTOOLS / ForgePIE (palette v3, plaques « track 5 ») */
+:root{
+  --BG:#0B0B0D;--PANEL:#151518;--RAISED:#1C1C20;--LINE:#34343C;--LINE2:#71717C;
+  --TEXT:#F2F2F4;--TEXT2:#A0A0AB;--DIM:#8E8E9A;--ACCENT:#45A5FF;--ACCENT_RGB:69,165,255;--INK:#0B0B0D;--TEXT_RGB:242,242,244;
+  --lit:rgba(var(--TEXT_RGB),.07);--lip:color-mix(in srgb,var(--BG) 70%,black);
+  --sheen:linear-gradient(rgba(var(--TEXT_RGB),.025),transparent 60%);
+  --MONO:"Azeret Mono",ui-monospace,monospace;--SANS:Inter,"Segoe UI",system-ui,sans-serif;
+  --T:190ms;--EASE:cubic-bezier(.33,1,.68,1);--gut:32px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--BG);color:var(--TEXT);font:400 16px/1.55 var(--SANS)}
+a{color:inherit}
+h1,h2,p{margin:0}
+:focus-visible{outline:2px solid var(--ACCENT);outline-offset:3px;border-radius:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--gut)}
+.well{display:inline-flex;align-items:center;height:22px;padding:0 6px;background:var(--BG);border:1px solid var(--LINE);border-radius:2px;box-shadow:inset 0 1px 2px rgba(0,0,0,.7);font:700 12px var(--MONO);letter-spacing:.06em;color:var(--TEXT)}
+.eyebrow{display:flex;align-items:center;gap:12px;font:700 12px var(--MONO);letter-spacing:.08em;text-transform:uppercase;color:var(--DIM);margin:0 0 14px}
+.eyebrow:after{content:"";flex:1;height:1px;background:var(--LINE)}
+.eyebrow b{color:var(--TEXT)}
+
+/* en-tête */
+.top{border-bottom:1px solid var(--LINE)}
+.top .wrap{min-height:64px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font:800 18px var(--SANS);letter-spacing:-.01em}
+.brand span{color:var(--DIM);font-weight:600}
+.stamp{margin-left:auto;font:700 12px var(--MONO);letter-spacing:.06em;text-transform:uppercase;color:var(--DIM)}
+.stamp b{color:var(--TEXT)}
+main.wrap{padding-top:32px;padding-bottom:64px}
+section+section{margin-top:40px}
+
+/* grille de cartes ; sur téléphone : un rail qu'on fait glisser */
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+@media (max-width:640px){
+  :root{--gut:16px}
+  .deck{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--gut) * -1);padding:4px var(--gut) 12px;scroll-padding:0 var(--gut);scrollbar-width:none}
+  .deck::-webkit-scrollbar{display:none}
+  .deck .card{flex:0 0 84%;scroll-snap-align:start}
+}
+
+/* une carte = une plaque cliquable */
+.card{--ring:var(--LINE2);position:relative;display:flex;flex-direction:column;gap:10px;width:100%;min-height:230px;padding:16px;text-align:left;cursor:pointer;
+  border:0;border-radius:3px;color:var(--TEXT);font:inherit;background:var(--PANEL);background-image:var(--sheen);
+  box-shadow:inset 0 1px 0 var(--lit),0 2px 0 var(--lip),inset 0 0 0 1px var(--ring);
+  transition:transform 280ms cubic-bezier(.34,1.5,.64,1),box-shadow var(--T) var(--EASE)}
+.card:hover,.card:focus-visible{--ring:var(--TEXT2);transform:translateY(-3px)}
+.card:active{transform:translateY(1px);box-shadow:inset 0 1px 0 var(--lit),0 0 0 var(--lip),inset 0 0 0 1px var(--ring)}
+.card.is-haute{--ring:rgba(var(--ACCENT_RGB),.55)}
+.card.is-haute:hover,.card.is-haute:focus-visible{--ring:var(--ACCENT)}
+.head{display:flex;align-items:center;gap:8px}
+.kind{display:inline-flex;align-items:center;gap:6px;font:700 11px var(--MONO);letter-spacing:.08em;text-transform:uppercase;color:var(--TEXT2)}
+.kind svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2}
+.card h2{font:700 17px/1.25 var(--SANS);letter-spacing:-.01em}
+.card p{font-size:14px;line-height:1.5;color:var(--TEXT2)}
+.foot{margin-top:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:10px;border-top:1px solid var(--LINE);font-size:12px;color:var(--DIM)}
+.foot .src{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* pastille d'importance : forme + mot, jamais la couleur seule */
+.imp{margin-left:auto;display:inline-flex;align-items:center;gap:6px;height:22px;padding:0 8px;border-radius:2px;font:700 11px var(--MONO);letter-spacing:.06em;text-transform:uppercase}
+.imp i{width:7px;height:7px;border-radius:50%}
+.imp-haute{background:var(--ACCENT);color:var(--INK)} .imp-haute i{background:var(--INK)}
+.imp-moyenne{border:1px solid var(--LINE2);color:var(--TEXT)} .imp-moyenne i{background:var(--TEXT)}
+.imp-basse{border:1px solid var(--LINE);color:var(--DIM)} .imp-basse i{border:1.5px solid var(--DIM)}
+.stat{font:700 11px var(--MONO);letter-spacing:.06em;text-transform:uppercase}
+.stat-rumeur{color:#E8B45A} .stat-avis{color:var(--DIM)} .stat-confirmé{color:var(--TEXT2)}
+
+/* détail d'une carte */
+dialog{width:min(640px,calc(100vw - 24px));max-height:calc(100svh - 24px);padding:0;border:0;border-radius:3px;color:var(--TEXT);background:var(--RAISED);
+  box-shadow:inset 0 1px 0 var(--lit),inset 0 0 0 1px var(--LINE2),0 30px 80px -20px #000}
+dialog::backdrop{background:rgba(5,5,7,.72)}
+.dlg{display:flex;flex-direction:column;gap:16px;padding:24px}
+.dlg h2{font:800 22px/1.2 var(--SANS);letter-spacing:-.01em}
+.dlg .meta{padding-right:44px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;color:var(--DIM)}
+.dlg .meta .imp{margin-left:0}
+.dlg .body{color:var(--TEXT);line-height:1.6}
+.forme{padding:12px 14px;border-left:2px solid var(--ACCENT);background:rgba(var(--ACCENT_RGB),.06);font-size:15px}
+.forme b{display:block;margin-bottom:2px;font:700 11px var(--MONO);letter-spacing:.08em;text-transform:uppercase;color:var(--ACCENT)}
+.links{display:flex;gap:8px;flex-wrap:wrap}
+.btn{height:40px;padding:0 14px;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--LINE);border-radius:3px;background:var(--PANEL);color:var(--TEXT);font:600 14px var(--SANS);text-decoration:none;box-shadow:inset 0 1px 0 var(--lit),0 2px 0 var(--lip);cursor:pointer}
+.btn:hover{background:color-mix(in srgb,var(--PANEL) 85%,white)}
+.close{position:absolute;top:12px;right:12px;width:36px;height:36px;padding:0;justify-content:center}
+.empty{color:var(--DIM)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">Veille GTA 6 <span>· modding</span></div>
+  <div class="stamp" id="stamp"></div>
+</div></header>
+
+<main class="wrap" id="app"><p class="empty">Chargement des cartes…</p></main>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg">
+    <button class="btn close" id="close" aria-label="Fermer">✕</button>
+    <div class="meta" id="dlg-meta"></div>
+    <h2 id="dlg-title"></h2>
+    <p class="body" id="dlg-body"></p>
+    <div class="forme" id="dlg-forme"><b>Pour toi</b><span></span></div>
+    <div class="links" id="dlg-links"></div>
+  </div>
+</dialog>
+
+<script>
+const ICONS = {
+  YouTube:  '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/>',
+  Outil:    '<path d="M14 6l4 4M4 20l9-9M13 4l7 7-3 3-7-7z"/>',
+  Presse:   '<path d="M4 5h13v14H6a2 2 0 0 1-2-2zM17 9h3v8a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7"/>',
+  Officiel: '<path d="M12 3l8 4v5c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V7z"/>',
+  Doc:      '<path d="M6 3h9l4 4v14H6zM14 3v5h5"/>'
+};
+const RANK = { haute: 0, moyenne: 1, basse: 2 };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const day = d => new Date(d + 'T12:00:00').toLocaleDateString('fr-BE', { day: 'numeric', month: 'short' });
+const imp = l => `<span class="imp imp-${l}"><i></i>${l}</span>`;
+const kind = t => `<span class="kind"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[t] || ICONS.Doc}</svg>${esc(t)}</span>`;
+
+let cards = [];
+
+function card(c, i) {
+  return `<button class="card is-${c.importance}" data-i="${i}">
+    <div class="head">${kind(c.source.type)}${imp(c.importance)}</div>
+    <h2>${esc(c.titre)}</h2>
+    <p>${esc(c.resume)}</p>
+    <div class="foot"><span class="src">${esc(c.source.nom)}</span><span class="stat stat-${c.statut.toLowerCase()}">${esc(c.statut)}</span><span class="well">${day(c.date)}</span></div>
+  </button>`;
+}
+
+function render() {
+  const app = document.getElementById('app');
+  if (!cards.length) { app.innerHTML = '<p class="empty">Aucune carte pour le moment.</p>'; return; }
+  const groups = [['haute', 'À ne pas rater'], ['moyenne', 'À suivre'], ['basse', 'Pour info']];
+  app.innerHTML = groups.map(([lvl, label]) => {
+    const list = cards.map((c, i) => [c, i]).filter(([c]) => c.importance === lvl);
+    return list.length ? `<section><h2 class="eyebrow"><b>${label}</b>${list.length}</h2><div class="deck">${list.map(([c, i]) => card(c, i)).join('')}</div></section>` : '';
+  }).join('');
+}
+
+function open(i) {
+  const c = cards[i], d = document.getElementById('dlg');
+  document.getElementById('dlg-meta').innerHTML = `${kind(c.source.type)}${imp(c.importance)}<span class="stat stat-${c.statut.toLowerCase()}">${esc(c.statut)}</span><span>${esc(c.source.nom)} · ${day(c.date)}</span>`;
+  document.getElementById('dlg-title').textContent = c.titre;
+  document.getElementById('dlg-body').textContent = c.detail;
+  const f = document.getElementById('dlg-forme');
+  f.hidden = !c.pourToi; f.querySelector('span').textContent = c.pourToi || '';
+  document.getElementById('dlg-links').innerHTML = (c.liens || []).map(l => `<a class="btn" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join('');
+  d.showModal();
+}
+
+document.getElementById('app').addEventListener('click', e => { const b = e.target.closest('.card'); if (b) open(+b.dataset.i); });
+document.getElementById('close').addEventListener('click', () => document.getElementById('dlg').close());
+document.getElementById('dlg').addEventListener('click', e => { if (e.target.id === 'dlg') e.target.close(); }); // clic sur le fond = fermer
+
+fetch('cards.json', { cache: 'no-store' })
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => {
+    cards = data.sort((a, b) => RANK[a.importance] - RANK[b.importance] || b.date.localeCompare(a.date));
+    const last = data.map(c => c.id.slice(0, 10)).sort().pop();
+    document.getElementById('stamp').innerHTML = `Mise à jour <b>${day(last)}</b> · <b>${data.length}</b> cartes`;
+    render();
+  })
+  .catch(err => { document.getElementById('app').innerHTML = `<p class="empty">Impossible de charger les cartes (${esc(err.message)}).</p>`; });
+</script>
+</body>
+</html>
