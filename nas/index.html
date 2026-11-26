@@ -131,7 +131,9 @@ function hover(el, c) {
 const note = n => typeof n === 'number' ? `<span title="Fiabilité du magasin, estimée par Claude">fiabilité ${n.toLocaleString('fr-BE')}/5</span>` : '';
 const second = s => !s || s.prix == null ? '' :
   `<div class="sc"><b>Seconde chance</b>${eur(s.prix)} chez ${s.lien ? `<a href="${esc(s.lien)}" target="_blank" rel="noopener">${esc(s.marchand)} ↗</a>` : esc(s.marchand)}
-   ${s.etat ? ` · ${esc(s.etat)}` : ''}${s.garantie ? ` · garantie ${esc(s.garantie)}` : ''}${typeof s.fiabilite === 'number' ? ` · fiabilité ${s.fiabilite.toLocaleString('fr-BE')}/5` : ''}</div>`;
+   ${s.etat ? ` · ${esc(s.etat)}` : ''}${s.garantie ? ` · garantie ${esc(s.garantie)}` : ''}${typeof s.fiabilite === 'number' ? ` · fiabilité ${s.fiabilite.toLocaleString('fr-BE')}/5` : ''}${s.verifie === false ? ' · <i>vu dans la recherche, non vérifié</i>' : ''}</div>`;
+const others = list => !(list || []).length ? '' :
+  `<ul class="stores">${list.map(o => `<li>${eur(o.prix)} chez ${o.lien ? `<a href="${esc(o.lien)}" target="_blank" rel="noopener">${esc(o.marchand)} ↗</a>` : esc(o.marchand)}${typeof o.fiabilite === 'number' ? ` · fiabilité ${o.fiabilite.toLocaleString('fr-BE')}/5` : ''}${o.verifie === false ? ' · <i>vu dans la recherche, non vérifié</i>' : ''}</li>`).join('')}</ul>`;
 
 function panel(c) {
   const m = c.meilleur || {};
@@ -152,6 +154,7 @@ function panel(c) {
       ${c.tendance ? `<span>${TEND[c.tendance] || esc(c.tendance)}</span>` : ''}
       ${c.verdict ? `<span class="badge v-${esc(c.verdict)}">${VERDICT[c.verdict] || esc(c.verdict)}</span>` : ''}
     </div>
+    ${others(c.autres_offres)}
     ${second(c.seconde_chance)}
     ${chart(c)}
     ${c.avis ? `<div class="avis"><b>Avis de Claude</b>${esc(c.avis)}</div>` : ''}
