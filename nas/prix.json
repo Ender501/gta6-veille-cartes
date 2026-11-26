@@ -11,20 +11,38 @@
     "prix": 209.9,
     "marchand": "Alternate.be",
     "modele": "Seagate IronWolf 4 To ST4000VN006",
-    "lien": "https://www.alternate.be/listing.xhtml?q=ST4000VN006"
+    "lien": "https://www.alternate.be/listing.xhtml?q=ST4000VN006",
+    "fiabilite": 4
    },
    "ancien_prix_affiche": null,
    "plus_bas_30j": null,
    "mediane_90j": null,
    "verdict": "neutre",
    "tendance": "stable",
-   "avis": "IronWolf à 209,90 € chez Alternate, dans le repère ; le WD Red Plus 4 To est à 224,90 €. Premier relevé : pas encore d'historique, donc ni médiane ni tendance. Prix correct pour l'étape 1, acheter si besoin sans attendre une promo hypothétique.",
+   "avis": "IronWolf à 209,90 € chez Alternate, dans le repère et 27 € sous Coolblue (237 €) ; LDLC le vend 249,95 € (version bulk, port non compté). Pas encore d'historique, mais le prix est correct pour l'étape 1 : acheter sans attendre.",
    "historique": [
     {
      "date": "2026-11-26",
      "prix": 209.9,
      "marchand": "Alternate.be",
      "source": "veille"
+    }
+   ],
+   "seconde_chance": null,
+   "autres_offres": [
+    {
+     "prix": 237.0,
+     "marchand": "Coolblue.be",
+     "fiabilite": 4,
+     "lien": "https://www.coolblue.be/fr/produit/905240/seagate-ironwolf-4-to.html",
+     "verifie": true
+    },
+    {
+     "prix": 249.95,
+     "marchand": "LDLC.be",
+     "fiabilite": 4.5,
+     "lien": "https://www.ldlc.com/fr-be/fiche/PB00494230.html",
+     "verifie": true
     }
    ]
   },
@@ -37,14 +55,15 @@
     "prix": 109.9,
     "marchand": "Alternate.be",
     "modele": "APC Back-UPS BX750MI (4 prises IEC)",
-    "lien": "https://www.alternate.be/listing.xhtml?q=APC+Back-UPS+BX750MI"
+    "lien": "https://www.alternate.be/listing.xhtml?q=APC+Back-UPS+BX750MI",
+    "fiabilite": 4
    },
    "ancien_prix_affiche": null,
    "plus_bas_30j": null,
    "mediane_90j": null,
    "verdict": "neutre",
    "tendance": "stable",
-   "avis": "APC BX750MI à 109,90 € (prises IEC), en haut du repère 100 – 110 €. Eaton Ellipse ECO introuvable chez Alternate. Historique insuffisant : à acheter à l'étape 2.",
+   "avis": "APC BX750MI à 109,90 € chez Alternate (prises IEC), en haut du repère 100 – 110 €. Amazon.com.be affiche le même prix mais est en rupture, et Amazon.fr (111,99 €) annonce 3 à 7 mois de délai. À acheter à l'étape 2.",
    "historique": [
     {
      "date": "2026-11-26",
@@ -52,7 +71,9 @@
      "marchand": "Alternate.be",
      "source": "veille"
     }
-   ]
+   ],
+   "seconde_chance": null,
+   "autres_offres": []
   },
   {
    "id": "ssd",
@@ -60,23 +81,34 @@
    "nom": "SSD NVMe 1 To",
    "quantite": 1,
    "meilleur": {
-    "prix": 149.9,
-    "marchand": "Alternate.be",
-    "modele": "Kingston NV3 1 To SNV3S/1000G",
-    "lien": "https://www.alternate.be/listing.xhtml?q=SNV3S%2F1000G"
+    "prix": 138.99,
+    "marchand": "Amazon.com.be",
+    "fiabilite": 3,
+    "modele": "Crucial P310 1 To CT1000P310SSD8",
+    "lien": "https://www.amazon.com.be/dp/B0DC8VPSHV"
    },
-   "ancien_prix_affiche": 159.9,
+   "ancien_prix_affiche": 199.99,
    "plus_bas_30j": null,
    "mediane_90j": null,
    "verdict": "neutre",
    "tendance": "stable",
-   "avis": "Kingston NV3 1 To à 149,90 € (affiché barré 159,90 €), sous le repère 151 – 171 €. La remise n'est pas vérifiable sans historique, donc verdict neutre. Prix bas par rapport au repère : intéressant à l'étape 3.",
+   "avis": "Crucial P310 1 To à 138,99 € vendu par Amazon.com.be, sous le repère 151 – 171 € et 11 € sous le Kingston NV3 d'Alternate (149,90 €). La remise affichée (199,99 € barré) n'est pas vérifiable sans historique. Bon prix si l'achat du SSD vient maintenant.",
    "historique": [
     {
      "date": "2026-11-26",
+     "prix": 138.99,
+     "marchand": "Amazon.com.be",
+     "source": "veille"
+    }
+   ],
+   "seconde_chance": null,
+   "autres_offres": [
+    {
      "prix": 149.9,
      "marchand": "Alternate.be",
-     "source": "veille"
+     "fiabilite": 4,
+     "lien": "https://www.alternate.be/listing.xhtml?q=SNV3S%2F1000G",
+     "verifie": true
     }
    ]
   },
@@ -89,14 +121,15 @@
     "prix": 299.0,
     "marchand": "Alternate.be",
     "modele": "Crucial CT16G48C40S5",
-    "lien": "https://www.alternate.be/listing.xhtml?q=CT16G48C40S5"
+    "lien": "https://www.alternate.be/listing.xhtml?q=CT16G48C40S5",
+    "fiabilite": 4
    },
    "ancien_prix_affiche": null,
    "plus_bas_30j": null,
    "mediane_90j": null,
    "verdict": "neutre",
    "tendance": "stable",
-   "avis": "299 € chez Alternate, bien au-dessus du repère 229 – 240 €. Attendre ou chercher ailleurs ; pas d'historique pour juger.",
+   "avis": "299 € chez Alternate, bien au-dessus du repère 229 – 240 €. Aucune offre moins chère vendue par un marchand de la liste (Amazon et MediaMarkt : vendeurs tiers) : attendre.",
    "historique": [
     {
      "date": "2026-11-26",
@@ -104,7 +137,46 @@
      "marchand": "Alternate.be",
      "source": "veille"
     }
-   ]
+   ],
+   "seconde_chance": null,
+   "autres_offres": []
+  }
+ ],
+ "marchands": [
+  {
+   "nom": "Alternate.be",
+   "fiabilite": 4,
+   "pourquoi": "Avis surtout positifs (livraison rapide, prix bas) ; service après-vente jugé faible."
+  },
+  {
+   "nom": "Amazon.com.be",
+   "fiabilite": 3,
+   "pourquoi": "Note d'avis basse, mais retours faciles quand l'article est vendu par Amazon."
+  },
+  {
+   "nom": "Amazon.fr",
+   "fiabilite": 3.5,
+   "pourquoi": "Avis partagés sur la livraison ; retours simples quand l'article est vendu par Amazon."
+  },
+  {
+   "nom": "LDLC.be",
+   "fiabilite": 4.5,
+   "pourquoi": "Très bons avis clients ; litiges de livraison minoritaires."
+  },
+  {
+   "nom": "Coolblue.be",
+   "fiabilite": 4,
+   "pourquoi": "Bons avis ; plaintes récentes sur des retards et le service client."
+  },
+  {
+   "nom": "Bol.com",
+   "fiabilite": 3.5,
+   "pourquoi": "Correct quand vendu par bol ; les vendeurs partenaires sont mal notés."
+  },
+  {
+   "nom": "MediaMarkt.be",
+   "fiabilite": 3.5,
+   "pourquoi": "Bons avis, mais Test-Achats le classe derrière pour livraison, retours et après-vente."
   }
  ]
 }
