@@ -1,5 +1,30 @@
 [
   {
+    "id": "2026-11-26-dmca-take-two",
+    "date": "2026-11-24",
+    "titre": "Take-Two fait retirer Leonida et 3 007 dépôts GitHub",
+    "source": {
+      "type": "Officiel",
+      "nom": "GitHub DMCA"
+    },
+    "importance": "haute",
+    "statut": "Confirmé",
+    "resume": "Demande DMCA de Take-Two : le portage PC Leonida et tout son réseau de forks sont désactivés, au nom de l'interdiction de rétro-ingénierie.",
+    "detail": "La notice DMCA publiée par GitHub, datée du 24/11, vient de l'équipe de protection de la propriété intellectuelle de Take-Two. Elle vise le dépôt Leonida et ses forks : GitHub a désactivé un réseau de 3 007 dépôts. Take-Two s'appuie sur l'article 2.3 des conditions de Rockstar, qui interdit de décompiler, décrypter, rétro-concevoir ou modifier ses jeux, et écarte l'argument « apportez vos propres fichiers ». Le 18/11, quatre notices semblables avaient déjà visé des portages web et mobiles de GTA V.",
+    "pourToi": "Tant qu'il n'y a pas de version PC officielle, tout outil qui lit les fichiers de GTA 6 risque la même suppression : rien de durable ne peut encore se construire pour intérieurs, props ou véhicules.",
+    "liens": [
+      {
+        "label": "Notice DMCA (GitHub)",
+        "url": "https://github.com/github/dmca/blob/master/2026/11/2026-11-24-take-two.md"
+      },
+      {
+        "label": "Tom's Hardware",
+        "url": "https://www.tomshardware.com/video-games/pc-gaming/rockstar-nukes-15-year-olds-gta-6-recompilation-project-discord-and-github-servers-taken-down-project-leonida-had-almost-180-000-discord-members-host-account-banned-for-two-years"
+      }
+    ],
+    "image": "https://opengraph.githubassets.com/1/github/dmca"
+  },
+  {
     "id": "2026-11-26-leonida-abandon",
     "date": "2026-11-24",
     "titre": "Leonida démarre sur PC, puis son créateur abandonne",
@@ -10,7 +35,7 @@
     "importance": "moyenne",
     "statut": "Rumeur",
     "resume": "Le portage PC non officiel atteint l'écran de démarrage, mais son créateur quitte le projet et le dépôt GitHub disparaît.",
-    "detail": "Une vidéo du 23/11 partagée sur le Discord du projet montrerait la recompilation « Leonida » de la build Xbox fuitée passer l'étape de démarrage sur PC ; rien n'est jouable. Le 24/11, son créateur NotRexed annonce sur X qu'il quitte le projet, après la fermeture de son serveur par Rockstar. La page GitHub a été retirée et des forks communautaires continuent. Rockstar n'a toujours annoncé aucune version PC.",
+    "detail": "Une vidéo du 23/11 partagée sur le Discord du projet montrerait la recompilation « Leonida » de la build Xbox fuitée passer l'étape de démarrage sur PC ; rien n'est jouable. Le 24/11, son créateur NotRexed annonce sur X qu'il quitte le projet, après la fermeture de son serveur par Rockstar. La page GitHub a été retirée ; ses 3 007 forks ont ensuite été bloqués par une demande DMCA de Take-Two (voir carte dédiée). Rockstar n'a toujours annoncé aucune version PC.",
     "pourToi": "Les outils de formats GTA 6 issus de la fuite restent juridiquement fragiles : mieux vaut attendre une version PC officielle avant d'investir dans des intérieurs, props ou véhicules.",
     "liens": [
       {
