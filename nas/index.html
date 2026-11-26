@@ -48,6 +48,11 @@ main.wrap{padding-top:32px;padding-bottom:64px;display:grid;gap:20px}
 .chart .ref{font:700 11px var(--MONO)}
 .tip{position:absolute;pointer-events:none;padding:6px 8px;border-radius:3px;background:var(--BG);border:1px solid var(--LINE2);font-size:12px;white-space:nowrap;transform:translate(-50%,-110%)}
 .tip[hidden]{display:none}
+.sc{margin-top:10px;padding:8px 12px;border:1px dashed var(--LINE2);border-radius:3px;font-size:14px;color:var(--TEXT2)}
+.sc b{display:block;font:700 11px var(--MONO);letter-spacing:.08em;text-transform:uppercase;color:var(--DIM)}
+.sc a{color:var(--TEXT)}
+.stores{font-size:13px;color:var(--TEXT2)}
+.stores li{margin:2px 0}
 .avis{margin-top:14px;padding-top:12px;border-top:1px solid var(--LINE);font-size:15px}
 .avis b{display:block;font:700 11px var(--MONO);letter-spacing:.08em;text-transform:uppercase;color:var(--DIM);margin-bottom:2px}
 details{margin-top:10px;font-size:13px;color:var(--TEXT2)}
@@ -123,6 +128,11 @@ function hover(el, c) {
   svg.addEventListener('pointerleave', () => { tip.hidden = true; cross.setAttribute('visibility', 'hidden'); });
 }
 
+const note = n => typeof n === 'number' ? `<span title="Fiabilité du magasin, estimée par Claude">fiabilité ${n.toLocaleString('fr-BE')}/5</span>` : '';
+const second = s => !s || s.prix == null ? '' :
+  `<div class="sc"><b>Seconde chance</b>${eur(s.prix)} chez ${s.lien ? `<a href="${esc(s.lien)}" target="_blank" rel="noopener">${esc(s.marchand)} ↗</a>` : esc(s.marchand)}
+   ${s.etat ? ` · ${esc(s.etat)}` : ''}${s.garantie ? ` · garantie ${esc(s.garantie)}` : ''}${typeof s.fiabilite === 'number' ? ` · fiabilité ${s.fiabilite.toLocaleString('fr-BE')}/5` : ''}</div>`;
+
 function panel(c) {
   const m = c.meilleur || {};
   const rows = (c.historique || []).slice().sort((a, b) => b.date.localeCompare(a.date))
@@ -135,12 +145,14 @@ function panel(c) {
     </div>
     <div class="meta">
       ${m.lien ? `<a href="${esc(m.lien)}" target="_blank" rel="noopener">${esc(m.marchand)} · ${esc(m.modele)} ↗</a>` : `<span>${esc(m.marchand || 'pas encore relevé')}</span>`}
+      ${note(m.fiabilite)}
       ${c.ancien_prix_affiche ? `<span>prix barré affiché : ${eur(c.ancien_prix_affiche)}</span>` : ''}
       <span>plus bas 30 j : ${eur(c.plus_bas_30j)}</span>
       <span>médiane 90 j : ${eur(c.mediane_90j)}</span>
       ${c.tendance ? `<span>${TEND[c.tendance] || esc(c.tendance)}</span>` : ''}
       ${c.verdict ? `<span class="badge v-${esc(c.verdict)}">${VERDICT[c.verdict] || esc(c.verdict)}</span>` : ''}
     </div>
+    ${second(c.seconde_chance)}
     ${chart(c)}
     ${c.avis ? `<div class="avis"><b>Avis de Claude</b>${esc(c.avis)}</div>` : ''}
     ${rows ? `<details><summary>Voir les relevés en tableau</summary><table><thead><tr><th>Date</th><th>Prix</th><th>Marchand</th><th>Source</th></tr></thead><tbody>${rows}</tbody></table></details>` : ''}
@@ -155,6 +167,7 @@ fetch('prix.json', { cache: 'no-store' })
     document.getElementById('app').innerHTML =
       (d.recommandation ? `<div class="reco"><b>Recommandation du jour</b>${esc(d.recommandation)}</div>` : '') +
       (list.length ? list.map(panel).join('') : '<p class="empty">Pas encore de relevé : le premier passage arrive.</p>') +
+      ((d.marchands || []).length ? `<section class="panel"><span class="step">Fiabilité des magasins (estimée par Claude, sur 5)</span><ul class="stores">${d.marchands.map(s => `<li><b>${esc(s.nom)}</b> : ${typeof s.fiabilite === 'number' ? s.fiabilite.toLocaleString('fr-BE') + '/5' : 'pas encore notée'}${s.pourquoi ? ' — ' + esc(s.pourquoi) : ''}</li>`).join('')}</ul></section>` : '') +
       '<p class="note">Prix unitaires livrés en Belgique, neufs, vendus et expédiés par le marchand. Une « fausse promo » = remise affichée alors que le prix n\'est pas sous sa médiane 90 jours, ou prix gonflé dans le mois avant la remise.</p>';
     list.forEach(c => { const el = document.querySelector(`.chart[data-id="${CSS.escape(c.id)}"]`); if (el) hover(el, c); });
   })
