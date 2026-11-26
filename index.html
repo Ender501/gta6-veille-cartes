@@ -96,6 +96,13 @@ dialog::backdrop{background:rgba(5,5,7,.72)}
 .btn:hover{background:color-mix(in srgb,var(--PANEL) 85%,white)}
 .close{position:absolute;top:12px;right:12px;width:36px;height:36px;padding:0;justify-content:center}
 .empty{color:var(--DIM)}
+#asks{margin-top:40px}
+/* demandes des joueurs : une liste, pas des cartes */
+.asks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.asks a{display:flex;align-items:center;gap:12px;min-height:48px;padding:10px 14px;border-radius:3px;background:var(--PANEL);box-shadow:inset 0 1px 0 var(--lit),inset 0 0 0 1px var(--LINE);text-decoration:none}
+.asks a:hover{box-shadow:inset 0 1px 0 var(--lit),inset 0 0 0 1px var(--TEXT2)}
+.asks .q{flex:1;min-width:0;font-weight:600}
+.asks .ax{font:700 11px var(--MONO);letter-spacing:.06em;text-transform:uppercase;color:var(--TEXT2)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -105,7 +112,7 @@ dialog::backdrop{background:rgba(5,5,7,.72)}
   <div class="stamp" id="stamp"></div>
 </div></header>
 
-<main class="wrap" id="app"><p class="empty">Chargement des cartes…</p></main>
+<main class="wrap"><div id="app"><p class="empty">Chargement des cartes…</p></div><section id="asks" hidden></section></main>
 
 <dialog id="dlg" aria-labelledby="dlg-title">
   <div class="dlg">
@@ -179,6 +186,18 @@ fetch('cards.json', { cache: 'no-store' })
     render();
   })
   .catch(err => { document.getElementById('app').innerHTML = `<p class="empty">Impossible de charger les cartes (${esc(err.message)}).</p>`; });
+
+// facultatif : la section reste cachée si le fichier manque ou est vide
+fetch('attentes.json', { cache: 'no-store' })
+  .then(r => r.ok ? r.json() : null)
+  .then(a => {
+    if (!a?.demandes?.length) return;
+    const s = document.getElementById('asks');
+    s.innerHTML = `<h2 class="eyebrow"><b>Ce que demandent les joueurs</b>maj ${day(a.maj)}</h2><ol class="asks">${a.demandes.map(d =>
+      `<li><a href="${esc(d.lien)}" target="_blank" rel="noopener"><span class="q">${esc(d.demande)}</span><span class="ax">${esc(d.axe)}</span><span class="well">${+d.mentions || 0}×</span></a></li>`).join('')}</ol>`;
+    s.hidden = false;
+  })
+  .catch(() => {});
 </script>
 </body>
 </html>
