@@ -1,0 +1,110 @@
+{
+ "maj": "2026-11-26",
+ "recommandation": "Commencer par les 2 disques : l'IronWolf 4 To à 209,90 € chez Alternate est dans le repère (205 – 220 €) ; la RAM, à 299 €, est à attendre.",
+ "composants": [
+  {
+   "id": "disques-4to",
+   "etape": 1,
+   "nom": "Disques 4 To CMR",
+   "quantite": 2,
+   "meilleur": {
+    "prix": 209.9,
+    "marchand": "Alternate.be",
+    "modele": "Seagate IronWolf 4 To ST4000VN006",
+    "lien": "https://www.alternate.be/listing.xhtml?q=ST4000VN006"
+   },
+   "ancien_prix_affiche": null,
+   "plus_bas_30j": null,
+   "mediane_90j": null,
+   "verdict": "neutre",
+   "tendance": "stable",
+   "avis": "IronWolf à 209,90 € chez Alternate, dans le repère ; le WD Red Plus 4 To est à 224,90 €. Premier relevé : pas encore d'historique, donc ni médiane ni tendance. Prix correct pour l'étape 1, acheter si besoin sans attendre une promo hypothétique.",
+   "historique": [
+    {
+     "date": "2026-11-26",
+     "prix": 209.9,
+     "marchand": "Alternate.be",
+     "source": "veille"
+    }
+   ]
+  },
+  {
+   "id": "onduleur",
+   "etape": 2,
+   "nom": "Onduleur",
+   "quantite": 1,
+   "meilleur": {
+    "prix": 109.9,
+    "marchand": "Alternate.be",
+    "modele": "APC Back-UPS BX750MI (4 prises IEC)",
+    "lien": "https://www.alternate.be/listing.xhtml?q=APC+Back-UPS+BX750MI"
+   },
+   "ancien_prix_affiche": null,
+   "plus_bas_30j": null,
+   "mediane_90j": null,
+   "verdict": "neutre",
+   "tendance": "stable",
+   "avis": "APC BX750MI à 109,90 € (prises IEC), en haut du repère 100 – 110 €. Eaton Ellipse ECO introuvable chez Alternate. Historique insuffisant : à acheter à l'étape 2.",
+   "historique": [
+    {
+     "date": "2026-11-26",
+     "prix": 109.9,
+     "marchand": "Alternate.be",
+     "source": "veille"
+    }
+   ]
+  },
+  {
+   "id": "ssd",
+   "etape": 3,
+   "nom": "SSD NVMe 1 To",
+   "quantite": 1,
+   "meilleur": {
+    "prix": 149.9,
+    "marchand": "Alternate.be",
+    "modele": "Kingston NV3 1 To SNV3S/1000G",
+    "lien": "https://www.alternate.be/listing.xhtml?q=SNV3S%2F1000G"
+   },
+   "ancien_prix_affiche": 159.9,
+   "plus_bas_30j": null,
+   "mediane_90j": null,
+   "verdict": "neutre",
+   "tendance": "stable",
+   "avis": "Kingston NV3 1 To à 149,90 € (affiché barré 159,90 €), sous le repère 151 – 171 €. La remise n'est pas vérifiable sans historique, donc verdict neutre. Prix bas par rapport au repère : intéressant à l'étape 3.",
+   "historique": [
+    {
+     "date": "2026-11-26",
+     "prix": 149.9,
+     "marchand": "Alternate.be",
+     "source": "veille"
+    }
+   ]
+  },
+  {
+   "id": "ram",
+   "etape": 4,
+   "nom": "RAM DDR5 SO-DIMM 16 Go",
+   "quantite": 1,
+   "meilleur": {
+    "prix": 299.0,
+    "marchand": "Alternate.be",
+    "modele": "Crucial CT16G48C40S5",
+    "lien": "https://www.alternate.be/listing.xhtml?q=CT16G48C40S5"
+   },
+   "ancien_prix_affiche": null,
+   "plus_bas_30j": null,
+   "mediane_90j": null,
+   "verdict": "neutre",
+   "tendance": "stable",
+   "avis": "299 € chez Alternate, bien au-dessus du repère 229 – 240 €. Attendre ou chercher ailleurs ; pas d'historique pour juger.",
+   "historique": [
+    {
+     "date": "2026-11-26",
+     "prix": 299.0,
+     "marchand": "Alternate.be",
+     "source": "veille"
+    }
+   ]
+  }
+ ]
+}
