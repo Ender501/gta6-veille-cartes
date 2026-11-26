@@ -1,5 +1,26 @@
 [
   {
+    "id": "2026-11-26-leonida-abandon",
+    "date": "2026-11-24",
+    "titre": "Leonida démarre sur PC, puis son créateur abandonne",
+    "source": {
+      "type": "Presse",
+      "nom": "TwistedVoxel"
+    },
+    "importance": "moyenne",
+    "statut": "Rumeur",
+    "resume": "Le portage PC non officiel atteint l'écran de démarrage, mais son créateur quitte le projet et le dépôt GitHub disparaît.",
+    "detail": "Une vidéo du 23/11 partagée sur le Discord du projet montrerait la recompilation « Leonida » de la build Xbox fuitée passer l'étape de démarrage sur PC ; rien n'est jouable. Le 24/11, son créateur NotRexed annonce sur X qu'il quitte le projet, après la fermeture de son serveur par Rockstar. La page GitHub a été retirée et des forks communautaires continuent. Rockstar n'a toujours annoncé aucune version PC.",
+    "pourToi": "Les outils de formats GTA 6 issus de la fuite restent juridiquement fragiles : mieux vaut attendre une version PC officielle avant d'investir dans des intérieurs, props ou véhicules.",
+    "liens": [
+      {
+        "label": "Article TwistedVoxel",
+        "url": "https://twistedvoxel.com/gta-6-pc-recompilation-leonida-developer-quits/"
+      }
+    ],
+    "image": "https://twistedvoxel.com/wp-content/uploads/2026/08/gta-vi-screenshots-2-1024x576.png"
+  },
+  {
     "id": "2026-11-23-sollumz-291",
     "date": "2026-11-10",
     "titre": "Sollumz 2.9.1 importe les vrais modèles du jeu",
