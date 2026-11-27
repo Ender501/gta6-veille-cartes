@@ -19,7 +19,7 @@
    "mediane_90j": null,
    "verdict": "neutre",
    "tendance": "stable",
-   "avis": "IronWolf à 209,90 € chez Alternate, dans le repère et 27 € sous Coolblue (237 €) ; LDLC le vend 249,95 € (version bulk, port non compté). Pas encore d'historique, mais le prix est correct pour l'étape 1 : acheter sans attendre.",
+   "avis": "IronWolf à 209,90 € chez Alternate, dans le repère ; Bol (vendu par bol) le fait à 227,90 €, Coolblue 237 €, LDLC 259,95 € (+10 €). Pas encore assez d'historique pour juger une promo, mais le prix est correct pour l'étape 1 : acheter sans attendre.",
    "historique": [
     {
      "date": "2026-11-26",
@@ -37,6 +37,13 @@
    "seconde_chance": null,
    "autres_offres": [
     {
+     "prix": 227.9,
+     "marchand": "Bol.com",
+     "fiabilite": 3.5,
+     "lien": "https://www.bol.com/be/fr/s/?searchtext=ST4000VN006",
+     "verifie": true
+    },
+    {
      "prix": 237.0,
      "marchand": "Coolblue.be",
      "fiabilite": 4,
@@ -44,7 +51,7 @@
      "verifie": true
     },
     {
-     "prix": 249.95,
+     "prix": 259.95,
      "marchand": "LDLC.be",
      "fiabilite": 4.5,
      "lien": "https://www.ldlc.com/fr-be/fiche/PB00494230.html",
@@ -69,7 +76,7 @@
    "mediane_90j": null,
    "verdict": "neutre",
    "tendance": "stable",
-   "avis": "APC BX750MI à 109,90 € chez Alternate (prises IEC), en haut du repère 100 – 110 €. Amazon.com.be affiche le même prix mais est en rupture, et Amazon.fr (111,99 €) annonce 3 à 7 mois de délai. À acheter à l'étape 2.",
+   "avis": "APC BX750MI (prises IEC) à 109,90 € chez Alternate, haut du repère 100 – 110 €. Amazon.com.be l'affiche à 96,01 € vendu par Amazon mais en rupture : à guetter s'il revient en stock. LDLC : 129,95 €.",
    "historique": [
     {
      "date": "2026-11-26",
@@ -80,41 +87,6 @@
     {
      "date": "2026-11-27",
      "prix": 109.9,
-     "marchand": "Alternate.be",
-     "source": "veille"
-    }
-   ],
-   "seconde_chance": null,
-   "autres_offres": []
-  },
-  {
-   "id": "ssd",
-   "etape": 3,
-   "nom": "SSD NVMe 1 To",
-   "quantite": 1,
-   "meilleur": {
-    "prix": 149.9,
-    "marchand": "Alternate.be",
-    "fiabilite": 4,
-    "modele": "Kingston NV3 1 To SNV3S/1000G",
-    "lien": "https://www.alternate.be/listing.xhtml?q=SNV3S%2F1000G"
-   },
-   "ancien_prix_affiche": 159.9,
-   "plus_bas_30j": null,
-   "mediane_90j": null,
-   "verdict": "neutre",
-   "tendance": "stable",
-   "avis": "Kingston NV3 1 To à 149,90 € chez Alternate (barré 159,90 €), sous le repère 151 – 171 €. Le Crucial P310 vu à 138,99 € chez Amazon.com.be hier est non vérifiable aujourd'hui (503) ; s'il revient, il est 11 € moins cher. Pas d'historique : acheter à l'étape 3.",
-   "historique": [
-    {
-     "date": "2026-11-26",
-     "prix": 138.99,
-     "marchand": "Amazon.com.be",
-     "source": "veille"
-    },
-    {
-     "date": "2026-11-27",
-     "prix": 149.9,
      "marchand": "Alternate.be",
      "source": "veille"
     }
@@ -122,11 +94,54 @@
    "seconde_chance": null,
    "autres_offres": [
     {
+     "prix": 129.95,
+     "marchand": "LDLC.be",
+     "fiabilite": 4.5,
+     "lien": "https://www.ldlc.com/fr-be/fiche/PB00406838.html",
+     "verifie": true
+    }
+   ]
+  },
+  {
+   "id": "ssd",
+   "etape": 3,
+   "nom": "SSD NVMe 1 To",
+   "quantite": 1,
+   "meilleur": {
+    "prix": 138.99,
+    "marchand": "Amazon.com.be",
+    "fiabilite": 3,
+    "modele": "Crucial P310 1 To CT1000P310SSD8",
+    "lien": "https://www.amazon.com.be/dp/B0DC8VPSHV"
+   },
+   "ancien_prix_affiche": 199.99,
+   "plus_bas_30j": null,
+   "mediane_90j": null,
+   "verdict": "neutre",
+   "tendance": "stable",
+   "avis": "Crucial P310 1 To vérifié à 138,99 € chez Amazon.com.be (vendu et expédié par Amazon, en stock), barré 199,99 € : la remise affichée n'est pas vérifiable faute d'historique. Amazon est noté 3/5 ; l'offre suivante mieux notée est le Kingston NV3 à 149,90 € chez Alternate (4/5). Sous le repère : à acheter à l'étape 3.",
+   "historique": [
+    {
+     "date": "2026-11-26",
      "prix": 138.99,
      "marchand": "Amazon.com.be",
-     "fiabilite": 3,
-     "lien": "https://www.amazon.com.be/dp/B0DC8VPSHV",
-     "verifie": false
+     "source": "veille"
+    },
+    {
+     "date": "2026-11-27",
+     "prix": 138.99,
+     "marchand": "Amazon.com.be",
+     "source": "veille"
+    }
+   ],
+   "seconde_chance": null,
+   "autres_offres": [
+    {
+     "prix": 149.9,
+     "marchand": "Alternate.be",
+     "fiabilite": 4,
+     "lien": "https://www.alternate.be/listing.xhtml?q=SNV3S%2F1000G",
+     "verifie": true
     }
    ]
   },
@@ -147,7 +162,7 @@
    "mediane_90j": null,
    "verdict": "neutre",
    "tendance": "stable",
-   "avis": "299 € chez Alternate, bien au-dessus du repère 229 – 240 €. Aucune offre moins chère vendue par un marchand de la liste (Amazon et MediaMarkt : vendeurs tiers) : attendre.",
+   "avis": "299 € chez Alternate, bien au-dessus du repère 229 – 240 €. Ailleurs, seulement des vendeurs tiers (Amazon.com.be 299 €, Bol 312 €), exclus : attendre.",
    "historique": [
     {
      "date": "2026-11-26",
