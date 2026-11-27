@@ -1,34 +1,34 @@
 {
-  "maj": "2026-11-26",
+  "maj": "2026-11-27",
   "demandes": [
     {
       "demande": "Moins de corvées imposées (repas, douche, travaux, jauge de couple)",
       "axe": "Autre",
-      "mentions": 7,
-      "lien": "https://www.metacritic.com/game/grand-theft-auto-vi/user-reviews/?platform=xbox-series-x"
+      "mentions": 12,
+      "lien": "https://www.metacritic.com/game/grand-theft-auto-vi/user-reviews/?platform=playstation-5"
     },
     {
       "demande": "Acheter des commerces, bâtir un empire : donner un usage à l'argent",
       "axe": "Autre",
-      "mentions": 5,
-      "lien": "https://www.metacritic.com/game/grand-theft-auto-vi/user-reviews/?platform=xbox-series-x"
-    },
-    {
-      "demande": "Assouplir ou retirer le système d'honneur",
-      "axe": "Autre",
-      "mentions": 4,
+      "mentions": 8,
       "lien": "https://www.metacritic.com/game/grand-theft-auto-vi/user-reviews/?platform=xbox-series-x"
     },
     {
       "demande": "Acheter maisons et appartements, plus d'une planque",
       "axe": "Intérieurs",
-      "mentions": 3,
+      "mentions": 7,
       "lien": "https://www.metacritic.com/game/grand-theft-auto-vi/user-reviews/?platform=xbox-series-x"
     },
     {
       "demande": "Posséder bateaux, avions et hélicoptères (marinas, hangars)",
       "axe": "Véhicules",
-      "mentions": 3,
+      "mentions": 6,
+      "lien": "https://www.metacritic.com/game/grand-theft-auto-vi/user-reviews/?platform=xbox-series-x"
+    },
+    {
+      "demande": "Assouplir ou retirer le système d'honneur",
+      "axe": "Autre",
+      "mentions": 5,
       "lien": "https://www.metacritic.com/game/grand-theft-auto-vi/user-reviews/?platform=xbox-series-x"
     }
   ]
