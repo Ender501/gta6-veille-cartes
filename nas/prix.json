@@ -93,18 +93,18 @@
    "nom": "SSD NVMe 1 To",
    "quantite": 1,
    "meilleur": {
-    "prix": 138.99,
-    "marchand": "Amazon.com.be",
-    "fiabilite": 3,
-    "modele": "Crucial P310 1 To CT1000P310SSD8",
-    "lien": "https://www.amazon.com.be/dp/B0DC8VPSHV"
+    "prix": 149.9,
+    "marchand": "Alternate.be",
+    "fiabilite": 4,
+    "modele": "Kingston NV3 1 To SNV3S/1000G",
+    "lien": "https://www.alternate.be/listing.xhtml?q=SNV3S%2F1000G"
    },
-   "ancien_prix_affiche": 199.99,
+   "ancien_prix_affiche": 159.9,
    "plus_bas_30j": null,
    "mediane_90j": null,
    "verdict": "neutre",
    "tendance": "stable",
-   "avis": "Crucial P310 1 To à 138,99 € vendu par Amazon.com.be, sous le repère 151 – 171 € et 11 € sous le Kingston NV3 d'Alternate (149,90 €). La remise affichée (199,99 € barré) n'est pas vérifiable sans historique. Bon prix si l'achat du SSD vient maintenant.",
+   "avis": "Kingston NV3 1 To à 149,90 € chez Alternate (barré 159,90 €), sous le repère 151 – 171 €. Le Crucial P310 vu à 138,99 € chez Amazon.com.be hier est non vérifiable aujourd'hui (503) ; s'il revient, il est 11 € moins cher. Pas d'historique : acheter à l'étape 3.",
    "historique": [
     {
      "date": "2026-11-26",
@@ -114,19 +114,19 @@
     },
     {
      "date": "2026-11-27",
-     "prix": 138.99,
-     "marchand": "Amazon.com.be",
+     "prix": 149.9,
+     "marchand": "Alternate.be",
      "source": "veille"
     }
    ],
    "seconde_chance": null,
    "autres_offres": [
     {
-     "prix": 149.9,
-     "marchand": "Alternate.be",
-     "fiabilite": 4,
-     "lien": "https://www.alternate.be/listing.xhtml?q=SNV3S%2F1000G",
-     "verifie": true
+     "prix": 138.99,
+     "marchand": "Amazon.com.be",
+     "fiabilite": 3,
+     "lien": "https://www.amazon.com.be/dp/B0DC8VPSHV",
+     "verifie": false
     }
    ]
   },
