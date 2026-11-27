@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-26",
+ "maj": "2026-11-27",
  "recommandation": "Commencer par les 2 disques : l'IronWolf 4 To à 209,90 € chez Alternate est dans le repère (205 – 220 €) ; la RAM, à 299 €, est à attendre.",
  "composants": [
   {
@@ -23,6 +23,12 @@
    "historique": [
     {
      "date": "2026-11-26",
+     "prix": 209.9,
+     "marchand": "Alternate.be",
+     "source": "veille"
+    },
+    {
+     "date": "2026-11-27",
      "prix": 209.9,
      "marchand": "Alternate.be",
      "source": "veille"
@@ -70,6 +76,12 @@
      "prix": 109.9,
      "marchand": "Alternate.be",
      "source": "veille"
+    },
+    {
+     "date": "2026-11-27",
+     "prix": 109.9,
+     "marchand": "Alternate.be",
+     "source": "veille"
     }
    ],
    "seconde_chance": null,
@@ -96,6 +108,12 @@
    "historique": [
     {
      "date": "2026-11-26",
+     "prix": 138.99,
+     "marchand": "Amazon.com.be",
+     "source": "veille"
+    },
+    {
+     "date": "2026-11-27",
      "prix": 138.99,
      "marchand": "Amazon.com.be",
      "source": "veille"
@@ -133,6 +151,12 @@
    "historique": [
     {
      "date": "2026-11-26",
+     "prix": 299.0,
+     "marchand": "Alternate.be",
+     "source": "veille"
+    },
+    {
+     "date": "2026-11-27",
      "prix": 299.0,
      "marchand": "Alternate.be",
      "source": "veille"
